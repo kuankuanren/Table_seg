@@ -236,17 +236,17 @@ if __name__=='__main__':
         print("rboxes type:",type(rboxes))
 
 
-        # #得到表头
-        # Image.fromarray(get_Head(img, rboxes[0], (0, 0, 0))).save(os.path.splitext(p)[0] + 'Head.jpg')
-        # # Image.fromarray(get_boxes(img, rboxes[0], (0, 0, 0))).save(os.path.splitext(p)[0] + '{}_box.jpg'.format(i))
+        #得到表头
+        Image.fromarray(get_Head(img, rboxes[0], (0, 0, 0))).save(os.path.splitext(p)[0] + 'Head.jpg')
+
 
         # 得到表尾
-        Image.fromarray(get_Foot(img, rboxes[16], (0, 0, 0))).save(os.path.splitext(p)[0] + 'Foot.jpg')
+        Image.fromarray(get_Foot(img, rboxes[len(rboxes)-1], (0, 0, 0))).save(os.path.splitext(p)[0] + 'Foot.jpg')
 
         #获得区域
-        # for i in range(len(rboxes)):
-        #     print("rboxes_{}".format(i),rboxes[i])
-        #     Image.fromarray(get_boxes(img,rboxes[i],(0,0,0))).save(os.path.splitext(p)[0] + '{}_box.jpg'.format(i))
+        for i in range(len(rboxes)):
+            print("rboxes_{}".format(i),rboxes[i])
+            Image.fromarray(get_boxes(img,rboxes[i],(0,0,0))).save(os.path.splitext(p)[0] + '{}_box.jpg'.format(i))
 
       # tmp=draw_boxes(np.array(img),rboxes,(0,0,0))
       #   for i in range(len(rboxes)):

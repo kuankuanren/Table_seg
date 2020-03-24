@@ -27,7 +27,7 @@ python3 table.py -jpgPath test/dd.jpg
 <img width="500" height="300" src="https://github.com/chineseocr/table-ocr/blob/master/test/dd.jpg"/>  
 ### 横线竖线检测
 <img width="500" height="300" src="https://github.com/chineseocr/table-ocr/blob/master/test/dd_seg.png"/>   
-### 单元格输出
+### 单元格输出3.
 <img width="500" height="300" src="https://github.com/chineseocr/table-ocr/blob/master/test/dd_box.jpg"/>   
  
 ## 参考   
