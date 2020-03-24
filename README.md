@@ -23,7 +23,7 @@ http://www.chineseocr.com:9990/static/models/table-ocr/table.weights
 python3 table.py -jpgPath test/dd.jpg 
 ```
 
-## 识别结果展示
+## 识别结果展10.示
 <img width="500" height="300" src="https://github.com/chineseocr/table-ocr/blob/master/test/dd.jpg"/>  
 ### 横线竖线检测
 <img width="500" height="300" src="https://github.com/chineseocr/table-ocr/blob/master/test/dd_seg.png"/>   

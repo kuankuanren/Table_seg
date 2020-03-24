@@ -8,17 +8,27 @@ image
 from PIL import Image
 import numpy as np
 import cv2
+
+   # tmp = tmp[0:bboxes[1], mylistx[0]:mylistx[12]]
+def get_boxes(im,bboxes,color=(0,0,0)):
+    tmp = np.copy(im)
+    x1, y1, x2, y2, x3, y3, x4, y4 = bboxes[:8]
+
+    tmp = tmp[int(y1) :int(y3) , int(x1):int(x2)]
+    return tmp
+
 def draw_boxes(im, bboxes,color=(0,0,0)):
     """
         boxes: bounding boxes
     """
+
     tmp = np.copy(im)
     c = color
     h, w,  = im.shape[:2]
     thick = int((h + w) / 300)
     i = 0
     for box in bboxes:
-       
+
         x1,y1,x2,y2,x3,y3,x4,y4 = box[:8]
         cx  =np.mean([x1,x2,x3,x4])
         cy  = np.mean([y1,y2,y3,y4])
